@@ -8,14 +8,26 @@
 
 
     <style>
-        .box {
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background: #ddd;
-            margin: 20px;
-            display: inline-block;
-        }
+       body {
+        background: #eee;
+        margin: 20px auto;
+        max-width: 960px;
+       }
+       p, h3, ul {
+        margin: 0;
+        padding: 0;
+       }
+
+       li {
+        list-style: none;
+        background: #fff;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       }
     </style>
 </head>
 <body>
@@ -25,7 +37,7 @@
 
         <div v-if="showBook">
           <ul>
-            <li v-for="book in books">
+            <li v-for="book in books" :class="{fav: book.isfav}">
                     <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
