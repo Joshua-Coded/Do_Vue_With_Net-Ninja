@@ -8,10 +8,14 @@
 </head>
 <body>
     <div id="app">
-        <div v-if="false">
+        <div v-if="showbook">
             <p>{{ title }} - {{author }} - {{age }}</p>
         </div>
 
+        <button @click="toggleShowBook">
+            <span v-if="showBook">Hide Book</span>
+            <span v-if="!showBook">Show Book</span>
+        </button>
     </div>
 
     <script src="app.js"></script>
