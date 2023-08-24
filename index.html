@@ -8,13 +8,10 @@
 </head>
 <body>
     <div id="app">
+        <div v-if="false">
+            <p>{{ title }} - {{author }} - {{age }}</p>
+        </div>
 
-        <p>{{ title }} - {{author }} - {{age }}</p>
-
-        <button @click="age++">I want to increase the age by one.</button>
-        <button @click="age--">I want to decrease the age by one.</button>
-
-        <div @click="changeTitle('Andor cassaian')">Chnage book title</div>
     </div>
 
     <script src="app.js"></script>
