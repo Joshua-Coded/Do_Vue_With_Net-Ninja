@@ -17,7 +17,7 @@
 
             <div v-for="skill in skills" :key="skill" class="pill">
                 {{skill}}
-            <div>
+            </div>
 
 
         <div class="terms">

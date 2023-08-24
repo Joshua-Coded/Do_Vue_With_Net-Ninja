@@ -7,8 +7,15 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    
+    <div id="app">
 
+        <p>{{ title }} - {{author }} - {{age }}</p>
+
+        <button @click="age++">I want to increase the age by one.</button>
+        <button @click="age--">I want to decrease the age by one.</button>
+
+        <div @click="changeTitle">Chnage book title</div>
+    </div>
 
     <script src="app.js"></script>
 </body>
