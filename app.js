@@ -2,11 +2,12 @@ const app = Vue.createApp({
     data(){
         return {
             showBook: true,
-            title: "the finale",
-            author: "Brandon sanderson",
-            age: 80,
-            x: 0,
-            y: 0,
+            books: [
+                {title: "name of the wind", author: "patrick"},
+                {title: "the way of kings", author: "brandon sanderson"},
+                {title: "the final empire", author: "brandon sanderson"},
+                {title: "name of the wind", author: "joshua alana"},
+            ]
         }
     },
 
@@ -14,17 +15,6 @@ const app = Vue.createApp({
             toggleShowBooK(){
                 this.showBook = !this.showBook
             },
-
-            handleEvent(e, data){
-                    console.log(e)
-                    if(data){
-                        console.log(data)
-                    }
-            },
-            handleMouseMove(e){
-                this.x = e.offsetX
-                this.y = e.offsetY
-            }
     }
 });
 
