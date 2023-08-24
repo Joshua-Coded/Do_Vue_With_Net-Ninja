@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data(){
         return {
+            url: 'https://afri-homes-3pyp.vercel.app/',
             showBook: true,
             books: [
                 {title: "name of the wind", author: "patrick"},
