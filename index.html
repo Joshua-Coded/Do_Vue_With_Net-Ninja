@@ -29,6 +29,10 @@
         justify-content: space-between;
        }
 
+       img {
+        height: 50px;
+        width: 50px;
+       }
        li.fav {
         background: #ff9ed2;
         color:  #fff;
@@ -42,7 +46,7 @@
 
         <div v-if="showBook">
           <ul>
-            <li v-for="book in books" :class="{fav: book.isfav}">
+            <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
                     <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
