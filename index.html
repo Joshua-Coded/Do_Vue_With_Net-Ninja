@@ -23,27 +23,28 @@
         <!-- Attribue binding -->
         <a :href="url">Afri Home</a>
 
-        <div v-if="showbook">
+        <div v-if="showBook">
           <ul>
             <li v-for="book in books">
-                    <h3>{{book.title}}</h3>
-                    <p>{{book.author }}</p>
+                    <img :src="book.img" :alt="book.title">
+                    <h3>{{ book.title }}</h3>
+                    <p>{{ book.author }}</p>
             </li>
           </ul>
         </div>
 
-        <button @click="toggleShowBook">
+        <!-- <button @click="toggleShowBook">
             <span v-if="showBook">Hide Book</span>
             <span v-if="!showBook">Show Book</span>
-        </button>
+        </button> -->
 
         <br>
 
         <!-- mouse events -->
-        <div class="box" @mouseover="handleEvent($event, 2023)">Mouseover (enter)</div>
+        <!-- <div class="box" @mouseover="handleEvent($event, 2023)">Mouseover (enter)</div>
         <div class="box" @mouseleave="handleEvent">Mouseleave</div>
         <div class="box" @dblclick="handleEvent">double click</div>
-        <div class="box" @mousemove="handleMouseMove">Position: {{x}} - {{y}}</div>
+        <div class="box" @mousemove="handleMouseMove">Position: {{x}} - {{y}}</div> -->
 
     </div>
 
